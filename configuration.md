@@ -30,6 +30,10 @@
 - Only stable public indexers used
 - Cloudflare-heavy indexers avoided where possible
 
+Important Startup Order
+
+qBittorrent must start after Gluetun:
+
 docker restart gluetun
 sleep 15
 docker restart qbittorrent
