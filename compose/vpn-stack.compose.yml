@@ -1,0 +1,23 @@
+services:
+  gluetun:
+    image: qmcgaw/gluetun:latest
+    container_name: gluetun
+    ports:
+      - "8000:8000"
+      - "8090:8080"
+      - "6881:6881/tcp"
+      - "6881:6881/udp"
+    restart: unless-stopped
+
+  qbittorrent:
+    image: lscr.io/linuxserver/qbittorrent:latest
+    container_name: qbittorrent
+    network_mode: "container:gluetun"
+    volumes:
+      - /volume1/docker/qbittorrent/config:/config
+      - /volume1/Media/Downloads:/downloads
+    environment:
+      - PUID=1024
+      - PGID=100
+      - TZ=America/New_York
+    restart: unless-stopped
