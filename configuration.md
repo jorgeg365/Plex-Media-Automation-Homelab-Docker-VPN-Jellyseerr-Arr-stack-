@@ -1,0 +1,36 @@
+
+---
+
+# 📄 `docs/configuration.md`
+
+```md
+# Configuration
+
+## Jellyseerr
+
+- Connected using Plex OAuth
+- Radarr added as default movie server
+- Sonarr added as default TV server
+- Root folders and quality profiles selected
+
+## Sonarr
+
+- qBittorrent configured as download client
+- Indexers added via Jackett
+- Root folder: /tv
+
+## Radarr
+
+- qBittorrent configured as download client
+- Indexers added via Jackett
+- Root folder: /movies
+
+## Jackett
+
+- Only stable public indexers used
+- Cloudflare-heavy indexers avoided where possible
+
+docker restart gluetun
+sleep 15
+docker restart qbittorrent
+
