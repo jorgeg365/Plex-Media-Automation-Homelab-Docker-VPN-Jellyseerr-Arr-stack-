@@ -1,0 +1,13 @@
+services:
+  jellyseerr:
+    image: fallenbagel/jellyseerr:latest
+    container_name: jellyseerr
+    ports:
+      - "5055:5055"
+    volumes:
+      - /volume1/docker/jellyseerr/config:/app/config
+    environment:
+      - PUID=1024
+      - PGID=100
+      - TZ=America/New_York
+    restart: unless-stopped
