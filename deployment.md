@@ -1,0 +1,21 @@
+
+---
+
+# 📄 `docs/deployment.md`
+
+```md
+# Deployment
+
+## Folder Layout
+
+```text
+/volume1/docker/
+├─ jellyseerr/
+│  └─ config/
+├─ vpn-stack/
+│  ├─ gluetun/
+│  └─ qbittorrent/
+└─ Media/
+   ├─ Downloads/
+   ├─ Movies/
+   └─ TV Shows/
