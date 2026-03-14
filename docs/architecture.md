@@ -31,7 +31,7 @@ flowchart TB
     qBit[qBittorrent]
   end
 
-  Internet[(Internet)]
+  Pxex[(Plex)]
 
   User --> Jellyseerr
   Jellyseerr --> Sonarr
