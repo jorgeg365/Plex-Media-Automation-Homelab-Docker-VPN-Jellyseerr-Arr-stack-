@@ -19,7 +19,7 @@ flowchart TB
   User[User / Phone / Browser]
 
   subgraph LAN["Home LAN"]
-    Plex[Plex]
+    Internet[Internet]
     Jellyseerr[Jellyseerr]
     Sonarr[Sonarr]
     Radarr[Radarr]
@@ -31,7 +31,7 @@ flowchart TB
     qBit[qBittorrent]
   end
 
-  Internet[(Internet)]
+  Plex[(Plex)]
 
   User --> Jellyseerr
   Jellyseerr --> Sonarr
@@ -40,5 +40,5 @@ flowchart TB
   Radarr --> Jackett
   Sonarr --> qBit
   Radarr --> qBit
-  qBit --> Gluetun --> Internet
-  Plex --> User
+  qBit --> Gluetun --> Plex
+  Internet --> User
