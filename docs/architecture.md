@@ -19,7 +19,7 @@ flowchart TB
   User[User / Phone / Browser]
 
   subgraph LAN["Home LAN"]
-    Plex[Plex]
+    Internet[Internet]
     Jellyseerr[Jellyseerr]
     Sonarr[Sonarr]
     Radarr[Radarr]
